@@ -14,6 +14,7 @@ import com.google.android.material.bottomsheet.BottomSheetBehavior;
 public class MainActivity extends AppCompatActivity {
 
     Button showbtn;
+    private Button hidebtn;
     private BottomSheetBehavior bottomSheetBehavior;
 
 
@@ -28,21 +29,32 @@ public class MainActivity extends AppCompatActivity {
         getSupportActionBar().hide();
 
         showbtn = findViewById(R.id.showbtn);
-
+        hidebtn = findViewById(R.id.hidebtn);
 
 
         LinearLayout bottomsheetlayout = findViewById(R.id.bottomsheetl);
         bottomSheetBehavior = BottomSheetBehavior.from(bottomsheetlayout);
 
-        bottomSheetBehavior.setPeekHeight(50);
+        bottomSheetBehavior.setPeekHeight(320);
 
         bottomSheetBehavior.setHideable(false);
 
         showbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                bottomsheetlayout.setVisibility(View.VISIBLE);
+
                 bottomSheetBehavior.setState(BottomSheetBehavior.STATE_HALF_EXPANDED);
 
+
+            }
+        });
+
+        hidebtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+//                bottomSheetBehavior.setState(BottomSheetBehavior.STATE_COLLAPSED);
+                bottomsheetlayout.setVisibility(View.INVISIBLE);
 
             }
         });

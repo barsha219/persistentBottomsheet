@@ -15,9 +15,15 @@
         android:layout_gravity="center"
         android:backgroundTint="#4290B3"
         android:textColor="@color/black"
-
-
         />
+    <Button
+        android:id="@+id/hidebtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hide bottom sheet"
+        android:layout_gravity="center"
+        android:layout_marginTop="110dp"
+        android:backgroundTint="#324DEA"/>
 
 
 
